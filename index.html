@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUNGA TECH | Animated Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes glow { 0%, 100% { text-shadow: 0 0 10px #38bdf8, 0 0 20px #38bdf8; } 50% { text-shadow: 0 0 20px #818cf8, 0 0 30px #818cf8; } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
+        body { background-color: #020617; color: #e2e8f0; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .animate-fade { animation: fadeIn 1s ease-out forwards; }
+        .animate-glow { animation: glow 3s infinite; }
+        .animate-float { animation: float 4s infinite ease-in-out; }
+        
+        .cyber-card { background: rgba(30, 41, 59, 0.5); border: 1px solid #1e293b; backdrop-filter: blur(10px); transition: 0.3s; opacity: 0; }
+        .cyber-card:hover { border-color: #38bdf8; box-shadow: 0 0 25px rgba(56, 189, 248, 0.3); }
+        .terminal-box { background: #000; border-radius: 8px; padding: 15px; font-family: 'Courier New', monospace; border-left: 4px solid #38bdf8; }
+        .btn-action { background: #38bdf8; color: #020617; font-weight: bold; transition: 0.3s; text-align: center; display: block; padding: 12px; border-radius: 8px; }
+        .btn-action:hover { transform: scale(1.05); background: #7dd3fc; }
+    </style>
+</head>
+<body class="pb-10">
+
+    <header class="py-16 text-center animate-fade" style="animation-delay: 0.2s;">
+        <h1 class="text-6xl font-black animate-glow tracking-tighter mb-2 text-sky-400">MUNGA TECH</h1>
+        <p class="text-gray-400 text-sm uppercase tracking-[0.5em] animate-pulse">Innovation • Automation • Engineering</p>
+    </header>
+
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="cyber-card p-6 rounded-2xl animate-fade" style="animation-delay: 0.4s;">
+                <h3 class="text-xl font-bold mb-4 text-sky-400 animate-float"><i class="fas fa-terminal mr-2"></i> Kali Commands</h3>
+                <div class="terminal-box text-xs space-y-2 h-40 overflow-y-auto mb-4">
+                    <p class="text-blue-300"># System Update</p>
+                    <p><span class="text-green-400">$</span> sudo apt update && upgrade -y</p>
+                    <p class="text-blue-300"># Network Scan</p>
+                    <p><span class="text-green-400">$</span> nmap -A -T4 target.com</p>
+                    <p class="text-blue-300"># Wifi Hacking</p>
+                    <p><span class="text-green-400">$</span> airmon-ng start wlan0</p>
+                    <p><span class="text-green-400">$</span> airodump-ng wlan0mon</p>
+                </div>
+                <a href="https://github.com/mishakorzik/All-In-One-Termux" class="btn-action">Get All Commands</a>
+            </div>
+
+            <div class="cyber-card p-6 rounded-2xl animate-fade" style="animation-delay: 0.6s;">
+                <h3 class="text-xl font-bold mb-4 text-sky-400 animate-float"><i class="fas fa-user-secret mr-2"></i> Kali Tools</h3>
+                <div class="space-y-3 mb-6">
+                    <a href="https://www.metasploit.com/" class="block p-3 bg-slate-800/50 rounded-lg hover:bg-sky-900/30 transition text-sm">🛡️ Metasploit Framework</a>
+                    <a href="https://portswigger.net/burp/communitydownload" class="block p-3 bg-slate-800/50 rounded-lg hover:bg-sky-900/30 transition text-sm">🌐 Burp Suite</a>
+                    <a href="https://www.wireshark.org/#download" class="block p-3 bg-slate-800/50 rounded-lg hover:bg-sky-900/30 transition text-sm">📡 Wireshark</a>
+                </div>
+                <a href="https://www.kali.org/tools/" class="btn-action">Download All Tools</a>
+            </div>
+
+            <div class="cyber-card p-6 rounded-2xl border-green-500/30 animate-fade" style="animation-delay: 0.8s;">
+                <h3 class="text-xl font-bold mb-4 text-green-400 animate-float"><i class="fab fa-whatsapp mr-2"></i> WhatsApp Bots</h3>
+                <div class="space-y-2 mb-6 text-sm">
+                    <a href="https://mini.bandaheali.site/" class="flex justify-between items-center p-2 hover:text-green-400 transition"><span>Mini Inconnu XD</span> <i class="fas fa-link text-xs"></i></a>
+                    <a href="https://magic-meagan-gamingrash-11daea8d.koyeb.app/mini-pair" class="flex justify-between items-center p-2 hover:text-green-400 transition"><span>Mini Pair Code</span> <i class="fas fa-link text-xs"></i></a>
+                    <a href="https://www.moneyheist.store/minibot/create" class="flex justify-between items-center p-2 hover:text-green-400 transition"><span>MiniBot Create</span> <i class="fas fa-link text-xs"></i></a>
+                    <a href="https://inconnu-xd-v2.vercel.app/" class="flex justify-between items-center p-2 hover:text-green-400 transition"><span>Inconnu-XD V2</span> <i class="fas fa-link text-xs"></i></a>
+                </div>
+                <a href="https://markmungajr-oss.github.io/Mungajr-bot-s/" class="btn-action bg-green-500">Open Bot Store</a>
+            </div>
+
+            <div class="cyber-card p-6 rounded-2xl border-orange-500/30 animate-fade" style="animation-delay: 1s;">
+                <h3 class="text-xl font-bold mb-4 text-orange-400 animate-float"><i class="fas fa-drafting-compass mr-2"></i> Civil Softwares</h3>
+                <div class="grid grid-cols-2 gap-2 mb-6">
+                    <a href="https://www.autodesk.com/products/autocad/overview" class="p-2 bg-orange-900/20 rounded border border-orange-500/20 text-center text-xs">AutoCAD</a>
+                    <a href="https://www.autodesk.com/products/revit/overview" class="p-2 bg-orange-900/20 rounded border border-orange-500/20 text-center text-xs">Revit</a>
+                    <a href="https://www.csiamerica.com/products/etabs" class="p-2 bg-orange-900/20 rounded border border-orange-500/20 text-center text-xs">ETABS</a>
+                    <a href="https://www.bentley.com/software/staad-pro/" class="p-2 bg-orange-900/20 rounded border border-orange-500/20 text-center text-xs">STAAD.Pro</a>
+                </div>
+                <a href="https://www.autodesk.com/education/free-software/featured" class="btn-action bg-orange-500">Get Student Access</a>
+            </div>
+
+            <div class="cyber-card p-6 rounded-2xl border-yellow-500/30 animate-fade text-center" style="animation-delay: 1.2s;">
+                <h3 class="text-xl font-bold mb-4 text-yellow-400 animate-float"><i class="fas fa-chart-line mr-2"></i> Betting Tips</h3>
+                <p class="text-sm text-gray-400 mb-6 italic">Daily 2.5+ Odds Rollover Challenge. Guaranteed precision.</p>
+                <div class="bg-yellow-500/10 p-4 rounded-xl border border-yellow-500/20 mb-4">
+                    <p class="text-yellow-200 font-bold">LATEST CHALLENGE</p>
+                    <p class="text-xs text-gray-400">Status: Analysing Games...</p>
+                </div>
+                <a href="https://wa.me/255716716113" class="btn-action bg-yellow-600">Join VIP Group</a>
+            </div>
+
+            <div class="cyber-card p-6 rounded-2xl border-red-500/30 animate-fade" style="animation-delay: 1.4s;">
+                <h3 class="text-xl font-bold mb-4 text-red-500 animate-float"><i class="fas fa-headset mr-2"></i> Contact Admin</h3>
+                <p class="text-xs text-gray-400 mb-6 text-center uppercase tracking-wider font-bold">Technical Support 24/7</p>
+                <div class="space-y-4">
+                    <a href="https://wa.me/255716716113" class="flex items-center justify-between p-3 border border-red-500/30 rounded-xl hover:bg-red-500/10 transition">
+                        <span class="text-sm font-bold">WhatsApp</span> <span class="text-xs text-red-400">0716 716 113</span>
+                    </a>
+                    <a href="tel:+255763071896" class="flex items-center justify-between p-3 border border-red-500/30 rounded-xl hover:bg-red-500/10 transition">
+                        <span class="text-sm font-bold">Call Admin</span> <span class="text-xs text-red-400">0763 071 896</span>
+                    </a>
+                </div>
+                <p class="text-[10px] text-center mt-4 text-red-400 italic font-bold">Munga Jr - Arusha Technical College</p>
+            </div>
+
+        </div>
+
+        <div class="mt-12 cyber-card p-8 rounded-3xl animate-fade" style="animation-delay: 1.6s;">
+            <h3 class="text-2xl font-bold mb-8 text-center text-sky-400"><i class="fas fa-code mr-2"></i> Software Engineering Tools</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="https://code.visualstudio.com/" class="p-4 bg-slate-900/80 rounded-2xl text-center border border-slate-700 hover:border-sky-500 transition group">
+                    <i class="fab fa-microsoft text-blue-400 text-2xl group-hover:scale-125 transition"></i><p class="text-[10px] mt-2">VS Code</p>
+                </a>
+                <a href="https://github.com/desktop" class="p-4 bg-slate-900/80 rounded-2xl text-center border border-slate-700 hover:border-sky-500 transition group">
+                    <i class="fab fa-github text-white text-2xl group-hover:scale-125 transition"></i><p class="text-[10px] mt-2">GitHub Desktop</p>
+                </a>
+                <a href="https://www.docker.com/" class="p-4 bg-slate-900/80 rounded-2xl text-center border border-slate-700 hover:border-sky-500 transition group">
+                    <i class="fab fa-docker text-blue-500 text-2xl group-hover:scale-125 transition"></i><p class="text-[10px] mt-2">Docker</p>
+                </a>
+                <a href="https://www.postman.com/" class="p-4 bg-slate-900/80 rounded-2xl text-center border border-slate-700 hover:border-sky-500 transition group">
+                    <i class="fas fa-rocket text-orange-500 text-2xl group-hover:scale-125 transition"></i><p class="text-[10px] mt-2">Postman API</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-20 text-center animate-fade" style="animation-delay: 1.8s;">
+        <p class="text-gray-500 text-[10px] font-bold uppercase tracking-[0.3em]">© 2026 MUNGA TECH | Mark Richard</p>
+    </footer>
+
+</body>
+</html>
